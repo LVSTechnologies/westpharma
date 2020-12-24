@@ -6,45 +6,24 @@ namespace YoutubePlayer.Utilities
     public static class Constants
     {
         public const string ApiKey = "AIzaSyBgG1FyDTFnUm0mIBjrJufcG6-5TIhuSCI";
-        public const string ChannelId = "UCe-f02uZgEXdHmHpC3loAQg";  // "UCsMica-v34Irf9KVTh6xx-g"; // Channel Id for Microsoft Developer
-        public const string PlayListId = "PLM75ZaNQS_FaHlFXg_NBjTqYvMSH63uz4";  //"PLM75ZaNQS_FaHlFXg_NBjTqYvMSH63uz4"; //Play list id for The Xamarin Show
+        public const string ChannelId = "UCe-f02uZgEXdHmHpC3loAQg";
+        public const string PlayListId = "PLM75ZaNQS_FaHlFXg_NBjTqYvMSH63uz4";
 
         public const string apiUrlForChannel = "https://www.googleapis.com/youtube/v3/search?part=id&maxResults=20&channelId="
-            + ChannelId //"UCCYR9GpcE3skVnyMU8Wx1kQ"
-                        //+ "Your_ChannelId"
-            + "&key="
-            + ApiKey;
+            + ChannelId + "&key=" + ApiKey;
 
         public const string watchUrlBase = "https://www.youtube.com/watch?v=";
         public const string embedUrlBase = "https://www.youtube.com/embed/";
 
-        // use this link to get an api_key : https://console.developers.google.com/apis/api/youtube/
-        //public const string ApiKey = Constants.ApiKey;
-
-        // doc : https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.videos.list 
+        
         public const string ApiUrlForChannel = "https://www.googleapis.com/youtube/v3/search?part=id&maxResults=20&channelId="
-            + ChannelId  //"UCCYR9GpcE3skVnyMU8Wx1kQ"
-                         //+ "Your_ChannelId"
-            + "&key="
-            + ApiKey;
+            + ChannelId + "&key=" + ApiKey;
 
-        // doc : https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.playlistItems.list
         public const string ApiUrlForPlaylist = "https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=20&playlistId="
-            + PlayListId // "PLpbcUe4chE7-uGCH1S0-qeuCWOMa2Tmam"
-            //+ "Your_PlaylistId"
-            + "&key="
-            + ApiKey;
+            + PlayListId + "&key=" + ApiKey;
 
-        // doc : https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.search.list
         public const string ApiUrlForVideosDetails = "https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id="
-            + "{0}"
-            //+ "0ce22qhacyo,j8GU5hG-34I,_0aQJHoI1e8"
-            //+ "Your_Videos_Id"
-            + "&key="
-            + ApiKey;
-
-        //public const string channelUrl = $"https://www.googleapis.com/youtube/v3/search?part=id&maxResults=20&channelId={ChannelId}&key={ApiKey}";
-        //public const string detailsUrl = "https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&key=" + ApiKey + "&id={0}";
+            + "{0}"+ "&key=" + ApiKey;
 
         public const string LoginErrorsTitle = "Login Errors";
         public const string MissingUserNamePassword = "Missing User/Password.";

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YoutubePlayer.Views.VideoDetailPage">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Orientation="Vertical" Spacing="20" Padding="10">
+            <Label Text="{Binding Title}" FontSize="Caption" FontAttributes="Bold" TextColor="Red" HorizontalOptions="CenterAndExpand" />
+            <WebView Source="{Binding SourceUrl}" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="300" WidthRequest="350" />
+            <Label Text="{Binding Description}" FontSize="Body" FontAttributes="Bold" TextColor="Blue" HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

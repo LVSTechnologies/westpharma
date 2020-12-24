@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behavior="clr-namespace:YoutubePlayer.Behaviors"
+             NavigationPage.HasBackButton="False"
+             x:Class="YoutubePlayer.Views.LoginPage">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Padding="20" Spacing="10" >
+            <Label 
+                x:Name="WelcomeBannerLabel"
+                Text="{Binding WelcomeBannerText}"
+                HorizontalOptions="CenterAndExpand"
+                FontAttributes="Bold"
+            AutomationId="lblWelcome"/>
+
+            <Image Source="youtubebanner.jpg" HorizontalOptions="CenterAndExpand" />
+
+            <Entry
+                x:Name="entEmail"
+                Text="{Binding EmailAddress}"
+                HorizontalOptions="CenterAndExpand"
+                Placeholder="Enter Email Address"
+                Style="{StaticResource EntryEnableControl}"
+                AutomationId="entEmailAddress">
+            </Entry>
+
+            <Entry
+                x:Name="entPassword"
+                Text="{Binding Password}"
+                HorizontalOptions="CenterAndExpand"
+                Placeholder="Enter Password"
+                IsPassword="True"
+                Style="{StaticResource EntryEnableControl}"
+                AutomationId="entEmailAddress" />
+
+            <Button 
+                Text="Local Login"
+                Command="{Binding LoginCommand}"
+                Style="{StaticResource ButtonControl}"
+            AutomationId="btnLogin"/>
+
+            <Label Text="OR"
+                   FontAttributes="Bold"
+                   FontSize="Header"
+                   TextColor="Red"
+                   HorizontalOptions="CenterAndExpand" />
+
+            <Button 
+                Text="Social Login"
+                Command="{Binding SocialLoginCommand}"
+                Style="{StaticResource ButtonControl}"
+            AutomationId="btnLogin"/>
+
+        </StackLayout>
+            </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

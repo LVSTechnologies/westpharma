@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YoutubePlayer.App">
+    <Application.Resources>
+
+        <Color x:Key="ButtonBackgroundColor">#4A7729</Color>
+        <Color x:Key="ButtonTextColor">#FFFFFF</Color>
+        <Color x:Key="PrimaryTextColor">#000000</Color>
+        <Color x:Key="GreyTextColor">#666</Color>
+
+        <!-- Button Styles -->
+        <Style x:Key="ButtonControl" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackgroundColor}" />
+            <Setter Property="TextColor" Value="{StaticResource ButtonTextColor}"/>
+            <Setter Property="HorizontalOptions" Value="Fill" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="FontSize">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Phone>14</OnIdiom.Phone>
+                    <OnIdiom.Tablet>18</OnIdiom.Tablet>
+                </OnIdiom>
+            </Setter>
+        </Style>
+
+        <!-- Base Entry -->
+        <Style x:Key="BaseEntry" TargetType="Entry">
+            <Setter Property="HorizontalOptions" Value="Fill" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="FontSize">
+                <OnIdiom x:TypeArguments="x:Double">
+                    <OnIdiom.Phone>12</OnIdiom.Phone>
+                    <OnIdiom.Tablet>18</OnIdiom.Tablet>
+                </OnIdiom>
+            </Setter>
+            <Setter Property="HeightRequest" Value="40"/>
+            <Setter Property="WidthRequest" Value="340"/>
+        </Style>
+
+        <!-- Enable Entry Styles -->
+        <Style x:Key="EntryEnableControl" TargetType="Entry" BasedOn="{StaticResource BaseEntry}" >
+            <Setter Property="BackgroundColor" Value="{StaticResource ButtonTextColor}" />
+            <Setter Property="TextColor" Value="{StaticResource PrimaryTextColor}"/>
+            <Setter Property="PlaceholderColor" Value="{StaticResource GreyTextColor}"/>
+        </Style>
+
+    </Application.Resources>
+</Application>
